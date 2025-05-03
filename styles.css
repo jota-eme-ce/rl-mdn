@@ -23,11 +23,11 @@ html, body {
 }
 
 .coin {
-  width: min(40vw, 40vh);
-  height: min(40vw, 40vh);
+  width: min(60vw, 60vh);
+  height: min(60vw, 60vh);
   position: relative;
   transform-style: preserve-3d;
-  animation: spin 1s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
 .cara, .cruz {
@@ -67,11 +67,11 @@ button:hover {
 .reveal-message {
   font-size: 1.5rem;
   margin-top: 2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid white;
-  width: 0;
-  animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+  white-space: normal;
+  overflow: visible;
+  border-right: none;
+  width: auto;
+  animation: none;
   background: linear-gradient(to right, #d4af37, #fff8dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -79,9 +79,19 @@ button:hover {
   text-shadow: 0 0 1px #d4af37;
 }
 
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  width: 0;
+  animation: typing 4s steps(50, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+
 @keyframes typing {
-  from { width: 0 }
-  to { width: 20ch }
+  from { width: 0; }
+  to { width: 40ch; }
 }
 
 @keyframes blink-caret {
