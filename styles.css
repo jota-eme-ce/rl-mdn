@@ -64,6 +64,31 @@ button:hover {
   color: white;
 }
 
+.reveal-message {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+  background: linear-gradient(to right, #d4af37, #fff8dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  text-shadow: 0 0 1px #d4af37;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 20ch }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
 @keyframes spin {
   from { transform: rotateY(0deg); }
   to { transform: rotateY(360deg); }
