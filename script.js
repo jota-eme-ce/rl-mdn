@@ -2,7 +2,7 @@ const coin = document.getElementById('coin');
 const button = document.getElementById('flipBtn');
 
 const message = document.createElement('div');
-message.textContent = "¡!";
+message.textContent = "¡El año que viene habrá un capillo verde más!";
 message.classList.add('reveal-message');
 message.style.display = "none";
 document.querySelector('.container').appendChild(message);
