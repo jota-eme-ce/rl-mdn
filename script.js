@@ -3,17 +3,15 @@ const button = document.getElementById('flipBtn');
 
 let currentRotation = 0;
 
-const lanzarMoneda = () => {
-  // Detener el giro infinito
+button.addEventListener('click', () => {
+  // Detener animación infinita
   coin.style.animation = 'none';
-  void coin.offsetWidth; // forzar reflujo
+  void coin.offsetWidth;
 
-  // Calcular nueva rotación (720º más para cada lanzamiento)
-  currentRotation += 720;
+  // Siempre terminar en la cara (0°)
+  currentRotation += 720 + 180;
 
-  // Lanzar animación que termina siempre en la cara (0º)
+  // Animar giro hasta la cara
   coin.style.transition = 'transform 5s ease-out';
   coin.style.transform = `rotateY(${currentRotation}deg)`;
-};
-
-button.addEventListener('click', lanzarMoneda);
+});
